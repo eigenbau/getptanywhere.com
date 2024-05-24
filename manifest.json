@@ -1,0 +1,13 @@
+{
+    "name": "Get PT Anywhere",
+    "short_name": "getptanywhere.com",
+    "icons": [
+        {
+            "src": "img/icons/google-touch-icon.png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "fullscreen"
+}
