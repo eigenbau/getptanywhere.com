@@ -513,34 +513,43 @@ nav {
 }
 
 /* Hero section - Background images */
-.section__grid--hero-background {
-  display: none;
-}
-@media (min-width: 480px) {
-  .section__grid--hero-background {
-    display: block;
-    grid-column: full-width;
-    grid-row: 1 / -1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    animation-name: fade;
-    animation-duration: 2s;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;
-  }
 
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+/* Styles for mobile devices */
+@media only screen and (max-width: 480px) {
+  .section__grid--hero-background.mobile {
+    display: block;
+  }
+}
+/* Styles for desktop devices */
+@media only screen and (min-width: 480px) {
+  .section__grid--hero-background.desktop {
+    display: block;
+  }
+}
+
+.section__grid--hero-background {
+  display: block;
+  grid-column: full-width;
+  grid-row: 1 / -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
