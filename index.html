@@ -43,7 +43,17 @@
       <section class="full-width nav">
         <div class="section__grid section__grid--nav">
           <img src="img/logos/logo-pow-mark.png" alt="Get PT Anywhere" />
-          <a href="https://cal.com/pascalbolla" target="_blank" class="button"
+          <a
+            class="button desktop"
+            data-cal-link="pascalbolla"
+            data-cal-namespace=""
+            data-cal-config='{"layout":"month_view"}'
+            >Book with Pascal</a
+          >
+          <a
+            href="https://cal.com/pascalbolla"
+            target="_blank"
+            class="button mobile"
             >Book with Pascal</a
           >
         </div>
@@ -54,8 +64,8 @@
       <section class="full-width bg-primary fullscreen">
         <img
           class="section__grid--hero-background full-width"
-          src="img/banners/hiking.jpg"
-          alt="Hiking"
+          src="img/banners/middle-age-person-telehealth-dark-scene.jpg"
+          alt="Virtual Physiotherapy"
         />
         <div class="section__grid section__grid--hero center-inline">
           <div class="heading">
@@ -77,12 +87,18 @@
           </div>
           <div class="rotating-text margin-block-start">
             <a
-              class="button text-shadow--desktop"
+              class="button desktop"
+              data-cal-link="pascalbolla"
+              data-cal-namespace=""
+              data-cal-config='{"layout":"month_view"}'
+              >Book with Pascal</a
+            >
+            <a
               href="https://cal.com/pascalbolla"
               target="_blank"
+              class="button mobile"
+              >Book with Pascal</a
             >
-              Book with Pascal
-            </a>
           </div>
 
           <a href="#main" class="desktop text-shadow--desktop"
@@ -464,20 +480,12 @@
     <!-- Footer -->
     <footer class="content-grid">
       <section class="full-width bg-medium-dark">
-        <h1 class="center-inline section__margin-block-start">
+        <h1
+          class="center-vertically center-inline section__margin-block-start section__margin-block-end"
+        >
           Virtual Physiotherapy - Helping you move, perform, and participate in
           life.
         </h1>
-        <div
-          class="section__grid section__grid--2-cols margin-block-start section__margin-block-end icon-list"
-        >
-          <a class="button icon" href="tel:16048493737">
-            <span class="material-symbols-rounded"> call </span>
-          </a>
-          <a href="https://cal.com/pascalbolla" target="_blank" class="button"
-            >Book with Pascal</a
-          >
-        </div>
       </section>
       <section class="full-width bg-dark">
         <div
@@ -502,6 +510,58 @@
     <!-- Script import - Start -->
     <script src="scripts/main.js" defer></script>
     <!-- Script import - End -->
+
+    <!-- Cal.com - Start -->
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", { origin: "https://cal.com" });
+
+      // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+      // `data-cal-link="pascalbolla/55-min-virtual"`
+      // data-cal-namespace=""
+      // `data-cal-config='{"layout":"month_view"}'`
+
+      Cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#094a7b" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    </script>
+    <!-- Cal element-click embed code ends -->
+    <!-- Cal.com - End -->
 
     <!-- Swiper JS - Start -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
