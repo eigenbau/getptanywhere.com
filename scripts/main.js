@@ -1,3 +1,24 @@
+// Nav opacity animation
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", function () {
+    const fadeStart = window.innerHeight; // Start fade at this scroll position
+    const fadeEnd = fadeStart * 1.25; // End fade at this scroll position (adjust as needed)
+
+    let scrollPosition = window.scrollY;
+
+    if (scrollPosition <= fadeStart) {
+      nav.style.opacity = 0;
+    } else if (scrollPosition >= fadeEnd) {
+      nav.style.opacity = 1;
+    } else {
+      let opacity = (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
+      nav.style.opacity = opacity;
+    }
+  });
+});
+
 // Phone input format
 // - Source: https://jsfiddle.net/rafj3md0/
 
