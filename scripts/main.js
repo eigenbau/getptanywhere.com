@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     const fadeStart = window.innerHeight; // Start fade at this scroll position
-    const fadeEnd = fadeStart * 1.25; // End fade at this scroll position (adjust as needed)
+    const fadeEnd = fadeStart * 1.125; // End fade at this scroll position (adjust as needed)
 
     let scrollPosition = window.scrollY;
 

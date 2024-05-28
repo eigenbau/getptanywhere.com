@@ -203,6 +203,10 @@ a.button.icon {
   color: var(--color-background);
 }
 
+.medium {
+  font-weight: 400;
+}
+
 .strong {
   font-weight: 600;
 }
@@ -230,6 +234,14 @@ a.button.icon {
 
 .section__margin-block-end {
   margin-block-end: 6rem;
+}
+
+.margin-segment-start {
+  margin-block-start: 1rem;
+}
+
+.margin-segment-start-medium {
+  margin-block-start: 2rem;
 }
 
 .divider-end::after {
@@ -276,10 +288,6 @@ body {
   html,
   body {
     scroll-snap-type: unset;
-  }
-
-  .text-shadow--desktop {
-    text-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 1);
   }
 }
 
