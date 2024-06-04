@@ -419,6 +419,10 @@ section.fullscreen {
   min-height: 100dvh;
 }
 
+section.hero {
+  min-height: 60dvh;
+}
+
 section.nav {
   background-color: var(--color-primary-opague);
   min-height: auto;
@@ -429,7 +433,7 @@ section.nav {
     min-height: auto;
   }
 
-  section:not(.fullscreen) {
+  section:not(.fullscreen) & section:not(.hero) {
     min-height: auto;
   }
 }
@@ -538,7 +542,7 @@ section.nav {
   opacity: 0;
   animation-name: fade;
   animation-duration: 2s;
-  animation-delay: 6s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
